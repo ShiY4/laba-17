@@ -1,0 +1,31 @@
+@import '../../styles/varibles';
+
+.navigate-btn{
+    display: flex;
+    max-width: 250px;
+    margin: 15px 0 20px 0;
+}
+
+.users-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $color-dirtywhite;
+        padding: 0 0 10px 0;
+
+        &_actions{
+            display: flex;
+            gap: 15px;
+        }
+    }
+
+    &__item-info{
+        display: flex;
+        gap: 30px;
+    }
+}

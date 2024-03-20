@@ -1,0 +1,24 @@
+@import '../../styles/varibles';
+
+.drop-down {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__lbl{
+        font-size: 14px;
+        color: $color-lbl;
+    
+        &_strong{
+            font-weight: 600;
+        }
+    }
+
+    &__select {
+        border: none;
+        border-bottom: 1px solid$color-darkgrey;
+        outline: none;
+        padding: 0;
+        font-size: 14px;
+    }
+}
