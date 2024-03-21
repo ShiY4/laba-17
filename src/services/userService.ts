@@ -17,14 +17,14 @@ export const signIn = createAsyncThunk<LoginResponseDto, loginRequestDto, AsyncT
 );
 
 export const signUp = createAsyncThunk<LoginResponseDto, RegistrationRequestDto, AsyncThunkOptions>(
-    `${NAMESPACE}/signIn`,
+    `${NAMESPACE}/signUp`,
     async(registrationData, { rejectWithValue }) => {
         try{
             await AuthApi.signUp(registrationData);
-            return AuthApi.signIn({
+            return await AuthApi.signIn({
                 login: registrationData.login,
                 password: registrationData.password
-            })
+            });
         } catch(error) {
             return rejectWithValue((error as Error).message);
         }
